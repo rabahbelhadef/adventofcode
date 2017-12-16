@@ -17,6 +17,7 @@ public class Day4Test {
     @Test
     @SuppressWarnings("unchecked")
     public void part1(){
+        assertThat(true).isTrue();
         assertThat(day4.part1(newArrayList(
                 "aa bb cc dd ee" //
                 ,"aa bb cc dd aa" //
@@ -26,6 +27,22 @@ public class Day4Test {
         assertThat(day4.part1(Try.of(() -> readAllLines(Paths.get("src/test/resources/day4.txt"))).get()))
                 .isEqualTo(383) ;
         
+    }
+
+    @Test
+    @SuppressWarnings("unchecked")
+    public void part2(){
+        assertThat(day4.part2(newArrayList(
+                 "abcde fghij" //
+                , "abcde xyz ecdab" //
+                , "a ab abc abd abf abj"
+                , "iiii oiii ooii oooi oooo"
+                , "oiii ioii iioi iiio" ))) //
+                .isEqualTo(3) ;
+
+        assertThat(day4.part2(Try.of(() -> readAllLines(Paths.get("src/test/resources/day4.txt"))).get()))
+                .isEqualTo(265) ;
+
     }
 
 

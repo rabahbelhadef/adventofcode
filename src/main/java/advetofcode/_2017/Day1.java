@@ -34,4 +34,5 @@ public class Day1 {
         return value -> value == last.get(modulo - 1) & addFirst.apply(last, value);
     }
 
+
 }
